@@ -223,7 +223,7 @@ context.moveTo(ship.x, ship.y);
 
     //   if(foodeaten*2< snakebody.length){
     //     let smallersquare = new Rectangle(Math.random()*2000, Math.random()*2000, 35, 35, "#FF00FF")
-    //     if(tinysquares.length < 300){
+    //     if(tinysquares.length < 75){
     //         tinysquares.push(smallersquare)
     //      }
 
@@ -259,7 +259,7 @@ context.stroke();
         
         if((Math.floor(Math.random()*100)) > 80){
         let smallersquare = new Rectangle(square.top, square.left, 35, 35, "#FF00FF")
-        if(tinysquares.length < 300){
+        if(tinysquares.length < 75){
             tinysquares.push(smallersquare)
          }
     }
@@ -344,7 +344,7 @@ for (let i = 0; i < tinysquares.length; i++){
           if((Math.floor(Math.random()*100)) > 80){
           let smallersquare = new Rectangle(tinysquares[i].top+(((Math.random()*200)-100)), tinysquares[i].left+(((Math.random()*200)-100)),  tinysquares[i].width*.90,  tinysquares[i].height*.90, getRandomLightColor())
          
-         if(tinysquares.length < 300){
+         if(tinysquares.length < 75){
             tinysquares.push(smallersquare)
          }
 
