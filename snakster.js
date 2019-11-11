@@ -109,27 +109,27 @@ window.addEventListener('DOMContentLoaded', (event) =>{
         switch (event.keyCode) {
            case 65:  
 
-           if(xmomentum != maxspeed){
+           if(xmomentum <= 0){
            ymomentum = 0 
            xmomentum = -maxspeed
         }
               break;
            case 87:
 
-                if(ymomentum != maxspeed){
+                if(ymomentum <= 0){
 xmomentum = 0
 ymomentum = -maxspeed
                 }
               break;
            case 68 :
 
-                if(xmomentum != -maxspeed){
+                if(xmomentum >= 0){ 
+                    ymomentum = 0
            xmomentum = maxspeed
-           ymomentum = 0
                 }
               break;
               case 83:
-                  if(ymomentum != -maxspeed){
+                  if(ymomentum >= 0){
                   xmomentum = 0
                   ymomentum = maxspeed
         }
@@ -211,7 +211,7 @@ context.moveTo(ship.x, ship.y);
 
         context.lineTo(snakebody[f][0], snakebody[f][1]); 
 
-        if(f > 5){
+        if(f > 7){
             if(((ship2.x+ship2.radius)  > snakebody[f][0] ) && ((ship2.x-ship2.radius) < snakebody[f][0]) && ((ship2.y+ship2.radius)  > snakebody[f][1])&&((ship2.y-ship2.radius)  < snakebody[f][1])){
               death()
             }
@@ -597,6 +597,9 @@ function getRandomLightColor() {
     shotcount = 9
     xmomentum = 0
     ymomentum = 0
+    timerone = 0
+    maxspeed =3.5
+    square = new Rectangle(100, 100, 100, 100, "#FF00FF")
  }
 
 })
